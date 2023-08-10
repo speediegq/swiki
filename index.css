@@ -1,0 +1,377 @@
+/* swiki
+ * See LICENSE file for copyright and license details.
+ */
+
+* {
+	font-family: Monospace;
+	font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    margin: 4px 4px 12px 20px;
+    padding: 4px 10px 4px 10px;
+}
+
+form {
+    display: inline;
+}
+
+li {
+    line-height: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+ul, ol {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding-left: 16px;
+    list-style-position: outside;
+}
+
+ul li, ol li {
+    padding-left: 8px;
+}
+
+li > ul, li > ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+pre {
+    font-family: Monospace;
+    margin-left: 0;
+    margin-bottom: 16px;
+    margin-top: 16px;
+
+    /* stroke each browser so that they wrap lines in the pre tag */
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+    border: 1px dotted gray;
+    padding: 3px 3px 3px 6px;
+}
+
+code {
+    font-family: Monospace;
+    padding: .16px .16px .16px .16px;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 3px;
+    max-width: 99%;
+}
+
+th {
+  text-align: left;
+}
+
+td, th {
+  padding: .16px 16px .16px .16px;
+  word-break: break-all;
+}
+
+thead {
+  font-weight: bold;
+}
+
+thead td a {
+  text-decoration:none;
+}
+
+thead td span.sortBy:after {
+  content: "\25BC";
+}
+
+.footer {
+    padding: 5px 5px 5px 16px;
+    font-family: Monospace;
+    width: 75%;
+}
+
+textarea {
+    font-family: Monospace;
+    width: 75%;
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  textarea {
+      width: 99%;
+  }
+}
+
+input[type="text"],
+textarea {
+    padding: 2px;
+}
+
+input {
+    font-family: Monospace;
+}
+
+.main {
+    padding: 5px 5px 5px 16px;
+}
+
+.main a {
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.main a:hover {
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.titlebar {
+    padding: 2px;
+}
+
+.titlebar span.title {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.titledate {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.toolbar {
+    position: sticky;
+    top: 0;
+}
+
+.toolbar > a, .titlebar > a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.toolbar > a:hover, .titlebar > a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 4px;
+    float: right;
+}
+
+.sidebar h1, h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.sidebar ul {
+    margin-top: 0;
+    margin-left: 4px;
+}
+
+input.search {
+    width:8px;
+    padding: .16px;
+}
+
+input.search:focus {
+    width: 8px;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+img.icon {
+    width: 24px;
+    vertical-align: middle;
+}
+
+a > img.icon:hover, a > span.icongroup:hover {
+    outline: 1px outset white;
+}
+a > img.icon:active, a > span.icongroup:active {
+    outline: 1px inset white;
+}
+
+input.search {
+    border-width: 0px;
+    width: 165px
+}
+
+.sidebar a {
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+body {
+    background-color: #363636;
+}
+
+blockquote {
+    background-color: #0f070f;
+}
+
+hr {
+    border-top: 1px solid #363636;
+}
+
+pre {
+    background: #212121;
+}
+
+code {
+    background: #212121;
+    color: #bbbbbb;
+}
+
+table {
+    background-color: #212121;
+    color: #dddddd;
+}
+
+td, th {
+  background: #212121;
+}
+
+thead {
+  border-bottom: 1px #000000;
+}
+
+tr:nth-child(even) {
+  background: #e4e4e4;
+}
+
+tr:nth-child(odd) {
+  background: #eeeeee;
+}
+
+.footer {
+    color: #f0eee4;
+}
+
+textarea {
+    background-color: #212121;
+    color: #f0eee4;
+}
+
+.main {
+    background-color: #212121;
+    color: #f0eee4;
+}
+
+.main a {
+    color: #89bfff;
+}
+
+.footer a {
+    color: #89bfff;
+}
+
+.main a:hover {
+    color: #ccccff;
+}
+
+.footer a:hover {
+    color: #ccccff;
+}
+
+.main a.literalMatch {
+    color: #6666ff;
+}
+
+.main a.noexist {
+    color: #f34000 !important;
+}
+
+.titlebar {
+    background-color: #262626;
+    color: #89bfff;
+}
+
+.titledate {
+    color: #777777;
+}
+
+.toolbar {
+    background-color: #363636;
+}
+
+.toolbar > a, .titlebar > a {
+    color: #eeeeee;
+}
+
+.sidebar {
+    border: solid 1px #666644;
+}
+
+input.search {
+    border-color: #363636;
+    background-color: #363636;
+    color: #f0eee4;
+}
+
+.sidebar {
+    color: #aaaaaa;
+    border-color: #aaaaaa;
+    background-color: #262626;
+}
+
+.sidebar a {
+    color: #19bfff;
+}
+
+.sidebar a:hover {
+    color: #bbbbff;
+}

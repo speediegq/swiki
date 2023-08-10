@@ -1,0 +1,3 @@
+# swiki
+
+simple wiki
