@@ -164,7 +164,7 @@ function purl($page) {
 	return SELF . "/".str_replace("%2F", "/", str_replace("%23", "#", urlencode(repsym($page))));
 }
 
-function pageLink($page, $title, $attributes="") {
+function linkpage($page, $title, $attributes="") {
 	return "<a href=\"" . purl($page) ."\"$attributes>$title</a>";
 }
 
@@ -181,10 +181,10 @@ function tohtml($fn) {
 		$linkedp = $linktitlesplit[0];
 		$linkt = (count($linktitlesplit) > 1) ? $linktitlesplit[1] : $linkedp;
 		$pagept = explode('#', $linkedp)[0];
-		$linkedp = getf(repsym($pagept));
-		$exists = file_exists($linkedp);
+		$linkedfn = getf(repsym($pagept));
+		$exists = file_exists($linkedfn);
 		$out = str_replace("[[$fulllinktext]]",
-			pageLink($linkedp, $linkt, ($exists? "" : " class=\"noexist\"")), $out);
+			linkpage($linkedp, $linkt, ($exists? "" : " class=\"noexist\"")), $out);
 	}
 
 	$out = preg_replace("/\{\{(.*?)\}\}/", "<img src=\"" . BASE . "/images/\\1\" alt=\"\\1\" />", $out);
@@ -264,7 +264,7 @@ function main() {
 
         foreach ($filelist as $pname => $pdate) {
             $html .= "<tr>".
-                "<td>".pageLink($pname, $pname)."</td>".
+                "<td>".linkpage($pname, $pname)."</td>".
                 "<td valign=\"top\"><nobr>".date( $dateformat, $pdate)."</nobr></td>".
                     "</tr>\n";
             }
