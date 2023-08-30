@@ -24,6 +24,10 @@ Simple, suckless read-only wiki
 Install PHP and clone the repository and point your web server to `index.php`.
 To test locally, you can run `php` with the `-S` argument.
 
+## Preview
+
+See the wiki in action [here](https://spmenu.speedie.site).
+
 ## License
 
 MIT License
